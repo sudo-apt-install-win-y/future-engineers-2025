@@ -4,11 +4,14 @@ import board
 import busio
 import digitalio
 import adafruit_vl53l0x
+import adafruit_tcs34725
 
 IN1 = 17
 IN2 = 27
 ENA = 18
 servo = 12
+
+csensor = 0
 
 Kp = 9
 Ki = 0
@@ -22,9 +25,6 @@ dt = 0
 steering_angle = 90
 output = 0
 last_error = 1
-
-turncounterleft = 0
-turncounterright = 0
 
 sensor1 = None
 sensor2 = None
@@ -118,6 +118,15 @@ def setupsensors():
     ]
     print("All sensors ready.")
 
+    # Set up I2C communication
+    i2c = busio.I2C(board.SCL, board.SDA)
+
+    # Initialize the TCS34725 color sensor
+    sensor = adafruit_tcs34725.TCS34725(i2c)
+
+    # Optional: turn on built-in LED if available
+    sensor.enable_led = True  # Turn off if your sensor has no LED or external lighting
+
 def get_distance(index):
     if 0 <= index < len(sensors):
         return sensors[index].range
@@ -183,21 +192,19 @@ def pidright():
     last_error = error
     last_time = current_time
 
+def in_range(rgb, r_min, r_max):
+    return all(low <= val <= high for val, low, high in zip(rgb, r_min, r_max))
+
 setup()
 forward(20)
 while True:
     while True:
+        r, g, b = csensor.color_rgb_bytes
         pidleft()
-        print(distance1, distance3)
-        if distance1 > 100:
-            turncounterleft += 1
 
-        elif distance3 > 100:
-            turncounterright += 1
-        
-        if turncounterleft == 3:
-            turncounterleft = 0
+        if in_range((r, g, b), (100, 50, 30), (150, 80, 60)): #put the Blue codes
             print('cornering left')
+            turningleft = True
             forward(30)
             time.sleep(0.2)
             set_angle(60)
@@ -206,9 +213,9 @@ while True:
             forward(20)
             break
 
-        elif turncounterright == 3:
-            turncounterright = 0
+        elif in_range((r, g, b), (100, 50, 30), (150, 80, 60)): #put the orange codes
             print('cornering right')
+            turningright = True
             forward(30)
             time.sleep(0.2)
             set_angle(120)
@@ -221,32 +228,33 @@ while True:
 
     if turningleft == True:
         while True:
+            r, g, b = csensor.color_rgb_bytes
             pidleft()
-            if distance1 > 70:
-                turncounterleft += 1
-
-            if turncounterleft == 3:
+            if in_range((r, g, b), (100, 50, 30), (150, 80, 60)): #put the Blue codes
+                print('cornering left')
                 forward(30)
                 time.sleep(0.2)
                 set_angle(60)
                 time.sleep(1)
                 set_angle(90)
                 forward(20)
+                break
                 
             time.sleep(0.05)
         
     elif turningright == True:
         while True:
+            r, g, b = csensor.color_rgb_bytes
             pidright()
-            if distance3 > 70:
-                turncounterright += 1
-            
-            if turncounterright == 3:
+            if in_range((r, g, b), (100, 50, 30), (150, 80, 60)): #put the orange codes
+                print('cornering right')
+                turningright = True
                 forward(30)
                 time.sleep(0.2)
-                set_angle(60)
+                set_angle(120)
                 time.sleep(1)
                 set_angle(90)
                 forward(20)
+                break
             
-            time.sleep
+            time.sleep(0.05)
