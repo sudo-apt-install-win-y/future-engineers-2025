@@ -5,23 +5,23 @@
 
 ## 1. Mobility Management
 
-Our vehicle is built on a custom 4-wheeled chassis. The front wheels are linked to a **servo-driven steering mechanism**, while the rear wheels are powered by a **single DC motor connected to a rear axle**. This setup ensures the robot adheres to the WRO rules against differential drive. The vehicle is front-steered using a standard PWM-controlled servo motor, allowing smooth angle control between 60° and 120°.
+Our vehicle is built on a prebuilt but customised 4-wheeled chassis. The front wheels are linked to a **servo-driven steering mechanism**, while the rear wheels are powered by a **single DC motor connected to a rear axle**. This setup ensures the robot adheres to the WRO rules against differential drive. The vehicle is front-steered using a standard PWM-controlled servo motor, allowing smooth angle control between 60° and 120°.
 
-We selected rubber-treaded wheels for traction and mounted the chassis low for better center of gravity and stability during turns. Steering angles are software-controlled to adapt to obstacle or color-based navigation scenarios.
+We selected rubber-treaded wheels for traction and mounted the chassis low for better centre of gravity and stability during turns. Steering angles are software-controlled to adapt to obstacle or colour-based navigation scenarios.
 
-We use a PWM-controlled motor driver with GPIO inputs `IN1`, `IN2`, and `ENA` to control speed and direction. The drivetrain was tested to work optimally between 20%–40% duty cycle for consistent track movement without wheel slip.
+We use a PWM-controlled motor driver with GPIO inputs `IN1`, `IN2`, and `ENA` to control speed and direction (eg: forward, reverse). The drivetrain was tested to work optimally between 20%–40% duty cycle for consistent track movement without wheel slip.
 
 ---
 
 ## 2. Power and Sensor Management
 
 ### Power System:
-The robot is powered using a 7.4V Li-ion battery connected to a voltage regulator module supplying 5V and 3.3V rails. Servo and motor are powered through separate power lines to prevent brownouts. The Raspberry Pi 4 is powered independently through USB-C.
+The robot is powered by a 7.4V Li-ion battery, which is regulated down to 5V to supply the primary electronics. To power the single-board computer (Raspberry Pi), we use a Raspberry Pi UPS HAT B, which provides stable 3.3V and 5V output rails, ensuring uninterrupted operation during voltage drops or sudden load spikes. Servo and motor are powered through separate power lines to prevent brownouts.
 
 ### Sensors:
-- **4x VL53L0X Time-of-Flight Distance Sensors**: Front-facing, placed at slight angles to cover left and right forward directions, used for wall following and PID correction.
+- **4x VL53L0X Time-of-Flight Distance Sensors**: The sensors are front-facing and positioned at the front-left, front-right, back-left, and back-right of the robot. This placement enables accurate distance measurement for wall-following and PID-based steering correction.
 - **TCS34725 Color Sensor**: Mounted downward to detect blue and orange track corner markers.
-- **PiCamera2**: Used in the Obstacle Challenge to detect red and green traffic signs and determine direction.
+- **Pi Camera 3**: Used in the Obstacle Challenge to detect red and green traffic signs.
 - **All sensors communicate over I2C**, with careful use of shutdown pins to avoid address conflicts.
 
 The color sensor is used continuously during track following to detect corners based on blue/orange shades, while the camera handles high-level object detection during the obstacle challenge.
