@@ -1,10 +1,10 @@
 # sudo apt install win -y Engineering journal
 
 ---
-## 1 Mobility Management
+## 1. Mobility Management
 
 
-## 2 Power and Sense Management
+## 2. Power and Sense Management
 ### Power
 We use 3 18650 batteries to provide 10.8 - 11.1 volts to our motor driver board. The motor driver board powers our DC Motor and Servo. To power our Raspberry Pi 4 B we have 2 more 18650 Batteries in a Waveshare UPS Hat B. This provides a stable power source to our Pi at 7.2 - 7.4 volts directly onto the Pi's power rails through Pogo Pins.
 
@@ -19,13 +19,13 @@ Our robot has a Gyro and accelorometer sensor (MPU60-50). We do not use the Acce
 
 Finally we have a colour sensor to detect the orange and blue lines on the mat to know when to take the corner.
 
-## 3 Obstacle Management
+## 3. Obstacle Management
 
 
-## 4 Pictures -- Team and Vehicle
+## 4. Pictures -- Team and Vehicle
 
 
-## 5 Performance Videos
+## 5. Performance Videos
 
 
-## 6 GitHub Utilisation
+## 6. GitHub Utilisation
