@@ -1,5 +1,5 @@
 # sudo apt install win -y Engineering journal
-# Table of contents
+## Table of contents
 ### [Mobility Management](#1-mobility-management)
 ### [Power and Sense Management](#2-power-and-sense-management)
 ### [Obstacle Management](#3-obstacle-management)
