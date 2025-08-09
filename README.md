@@ -5,7 +5,7 @@
 ### [Obstacle Management](#3-obstacle-management)
 ### [Pictures](#4-pictures----team-and-vehicle)
 ### [Performance Videos](#5-performance-videos)
-### [Github Ultilisation](#2-power-and-sense-management)
+### [Github Ultilisation](#6-github-utiliaation)
 ### [3D Models](/models)
 ### [Source Code](/src)
 
