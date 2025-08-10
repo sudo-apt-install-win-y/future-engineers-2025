@@ -11,7 +11,7 @@
 
 ---
 ## 1. Mobility Management
-
+Our robot is built like a normal RWD (Rear Wheel Drive) car you find in everyday life. This means it has two wheels at the rear of the robot which provide drive. At the front of the robot there are two wheels which provide steering functionality.
 
 ## 2. Power and Sense Management
 ### Power
