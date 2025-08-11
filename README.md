@@ -14,7 +14,9 @@
 ### Drivetrain type
 Our robot is built like a normal RWD (Rear Wheel Drive) car you find in everyday life. This means it has two wheels at the rear of the robot, which provide drive. At the front of the robot, two wheels provide steering functionality. 
 ### Rear Drive Assembly
-The rear axle is powered by a single DC motor with external gears, which speeds the robot up to allow for faster driving around the board. These gears connect to a simple but reliable rear axle, which is held in place by two ball bearings on either side of the robot. These connect to two thick and gripy rubber wheels that provide strong traction to the board mat.
+The rear axle is powered by a single 12V DC motor with external gears, which speeds the robot up to allow for faster driving around the board. These gears connect to a simple but reliable rear axle, which is held in place by two ball bearings on either side of the robot. These connect to two thick and grippy rubber wheels that provide strong traction to the board mat.
+### Front Drive Assembly
+The front wheels are not powered to provide traction but are used for steering to navigate obstacles, turn corners, and parallel park the robot. We used a standard 12V 180-degree servo motor to turn a certain amount or continue straight. The steering rack utilises Ackermann steering geometry to make sure that turns are taken properly, accounting for wheels on the inside and outside of a turn needing to trace out circles of different radii.
 
 ## 2. Power and Sense Management
 ### Power
