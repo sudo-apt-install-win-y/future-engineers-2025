@@ -11,22 +11,25 @@
 
 ---
 ## 1. Mobility Management
-Our robot is built like a normal RWD (Rear Wheel Drive) car you find in everyday life. This means it has two wheels at the rear of the robot which provide drive. At the front of the robot there are two wheels which provide steering functionality. The rear axle is powered by a single DC motor with external gears.
+### Drivetrain type
+Our robot is built like a normal RWD (Rear Wheel Drive) car you find in everyday life. This means it has two wheels at the rear of the robot, which provide drive. At the front of the robot, two wheels provide steering functionality. 
+### Rear Drive Assembly
+The rear axle is powered by a single DC motor with external gears, which speeds the robot up to allow for faster driving around the board. These gears connect to a simple but reliable rear axle, which is held in place by two ball bearings on either side of the robot. These connect to two thick and gripy rubber wheels that provide strong traction to the board mat.
 
 ## 2. Power and Sense Management
 ### Power
 We use 3 18650 batteries to provide 10.8 - 11.1 volts to our motor driver board. The motor driver board powers our DC Motor and Servo. To power our Raspberry Pi 4 B we have 2 more 18650 Batteries in a Waveshare UPS Hat B. This provides a stable power source to our Pi at 7.2 - 7.4 volts directly onto the Pi's power rails through Pogo Pins.
 
 ### Sensors
-Our robot has 4 VL53L0X Time of Flight sensors situated with 2 on either side of our robot to give us the distances between the walls and our robot. Using these we also determine a rough angle of our robot by looking at the distances at the front and the back of our robot.
+Our robot has 4 VL53L0X Time of Flight sensors situated with 2 on either side of our robot to give us the distances between the walls and our robot. Using these, we also determine a rough angle of our robot by looking at the distances at the front and the back of our robot.
 
-Instead of these Time of Flights we would have preffered a lidar to detect the walls however our club wouldn't buy one for us.
+Instead of these Time of Flights, we would have preferred a lidar to detect the walls; however, our club wouldn't buy one for us.
 
-The robot is also equiped with a Raspberry Pi Camera 3 Regular Angle (76 degrees) to see the red and green obstacles in round 2. 
+The robot is also equipped with a Raspberry Pi Camera 3 Regular Angle (76 degrees) to see the red and green obstacles in round 2. 
 
-Our robot has a Gyro and accelorometer sensor (MPU60-50). We do not use the Accelorometer, we just use the Gyro to determine the angle of the robot. 
+Our robot has a Gyroscope and accelerometer sensor (MPU60-50). We do not use the Accelerometer; we just use the Gyroscope to determine the angle of the robot. 
 
-Finally we have a colour sensor to detect the orange and blue lines on the mat to know when to take the corner.
+Finally, we have a colour sensor to detect the orange and blue lines on the mat to know when to take the corner.
 
 ## 3. Obstacle Management
 
