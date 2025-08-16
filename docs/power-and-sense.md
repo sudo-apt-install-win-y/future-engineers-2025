@@ -5,7 +5,7 @@ We use 3 18650 batteries to provide 10.8 - 11.1 volts to our motor driver board.
 ### Time of Flight Sensors
 Our robot has 4 VL53L0X Time of Flight sensors situated with 2 on either side of our robot to give us the distances between the walls and our robot. Using these, we also determine a rough angle of our robot by looking at the distances at the front and the back of our robot.
 
-Instead of these Time of Flights, we would have preferred a lidar to detect the walls; however, our club wouldn't buy one for us.
+Instead of these Time of Flights, we would have preferred a lidar to detect the walls, maybe next year.
 
 ### Camera
 The robot is also equipped with a Raspberry Pi Camera 3 Regular Angle (76 degrees) to see the red and green obstacles in round 2. 
