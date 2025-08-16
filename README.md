@@ -1,7 +1,10 @@
 # sudo apt install win -y - WRO 2025 Future Engineers
 **Category:** Future Engineers - Self-Driving Cars
+
 **Team:** DJ_Theron, TheGuyInTheRedSuit
-**Coach:** Tony
+
+**Coach:** Jarret Williams
+
 **Country:** South Africa
 
 ## Table of contents
