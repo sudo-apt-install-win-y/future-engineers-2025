@@ -10,4 +10,3 @@ First you need to get the setup.sh code from its public github.
 <pre>curl https://github.com/sudo-apt-install-win-y/setup-script/blob/main/setup.sh</pre>
 Now you need to just run the bash file and everything should install.
 <pre>bash setup.sh</pre>
-
