@@ -15,8 +15,8 @@ SHORT_PRESS  = 1.0     # seconds threshold for short vs long press
 
 # Map press type to your scripts
 SCRIPTS = {
-    'short': '/home/pi/robot/robot/round1/round1.py',
-    'long':  '/home/pi/robot/robot/round2/fullmotionadded.py'
+    'short': '~/WRO2025-FE-sudoaptinstallwin-y/software/round1/round1.py',
+    'long':  '~/WRO2025-FE-sudoaptinstallwin-y/software/round2/round2.py'
 }
 
 # --- Setup -----------------------------------------------------------------

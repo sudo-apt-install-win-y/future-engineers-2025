@@ -5,5 +5,9 @@ To get started you will need to flash the SD card that will be inserted into the
 First go to [the raspberry pi downloads page](https://www.raspberrypi.com/software/) and download raspberry pi imager for your OS.
 
 
-## Clone the Repository
-You will need to first clone into the public GitHub repository 
+## Run setup.sh
+First you need to get the setup.sh code from its public github.
+<pre>curl https://github.com/sudo-apt-install-win-y/setup-script/blob/main/setup.sh</pre>
+Now you need to just run the bash file and everything should install.
+<pre>bash setup.sh</pre>
+
