@@ -6,4 +6,4 @@ First go to [the raspberry pi downloads page](https://www.raspberrypi.com/softwa
 
 
 ## Clone the Repository
-You will need to first clone the repository into
+You will need to first clone into the public GitHub repository 
