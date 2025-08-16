@@ -1,0 +1,14 @@
+Component,Description,Qty,Manufacturer,Purpose,Team_Fabricated,Source
+Raspberry Pi 4B,Main computer 2GB RAM,1,RPi Foundation,Processing and vision,No,pishop.co.za
+Pi Camera v3,8MP camera module,1,RPi Foundation,Track and object detection,No,pishop.co.za
+DC Motor,12V motor,1,Generic,Drive system,No,Hobby shop
+Servo Motor,180° standard servo,1,Generic,Steering control,No,Hobby shop
+ToF Sensors,HC-SR04 distance sensors,4,Generic,Obstacle detection,No,Online supplier
+Robot Chassis,Main frame structure,1,Custom,Mechanical support,No,Laser cut acrylic
+Camera Mount,Camera holder,1,Custom,Vision system mount,Yes,3D printed
+Motor Driver,L298N dual H-bridge,1,Generic,Motor control,No,Electronics store
+Custom PCB,Power distribution board,1,Custom,Wiring organization,Yes,Team designed
+Battery,7.4V Li-Po 1500mAh,1,Generic,Power supply,No,RC hobby store
+Wheels,Rubber wheels 65mm,4,Generic,Movement and steering,No,Various suppliers
+Hardware,Screws nuts spacers,Set,Generic,Assembly,No,Hardware store
+Wiring,Jumper wires connectors,Set,Generic,Connections,No,Electronics store
